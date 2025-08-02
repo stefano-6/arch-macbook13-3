@@ -51,3 +51,13 @@ install_pkg "${BROWSERS[@]}"
 echo "Intalling other packages..."
 install_pkg "${OTHER[@]}"
 
+# Move up to git directory
+cd ..
+
+# Clone the dotfiles-arch.git reposetory
+git clone 
+cd dotfiles-arch
+
+stow --target ~ hypr
+
+
