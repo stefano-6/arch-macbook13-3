@@ -48,4 +48,6 @@ install_pkg "${HYPRLAND[@]}"
 echo "Intalling browsers..."
 install_pkg "${BROWSERS[@]}"
 
+echo "Intalling other packages..."
+install_pkg "${OTHER[@]}"
 
