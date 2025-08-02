@@ -39,8 +39,13 @@ else
 fi
 
 # Install packages
-echo "Intalling system base..."
-install_pkg "${SYSTEM_BASE[@]}"
+echo "Intalling terminals..."
+install_pkg "${TEREMINALS[@]}"
 
-echo "Intalling network base..."
-install_pkg "${SYSTEM_BASE[@]}"
+echo "Intalling hyprland..."
+install_pkg "${HYPRLAND[@]}"
+
+echo "Intalling browsers..."
+install_pkg "${BROWSERS[@]}"
+
+
