@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Clear terminal and print logo
 clear
 # print_logo
