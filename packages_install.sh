@@ -55,9 +55,68 @@ install_pkg "${OTHER[@]}"
 cd ..
 
 # Clone the dotfiles-arch.git reposetory
-git clone 
+git clone https://github.com/stefano-6/dotfiles-arch.git
 cd dotfiles-arch
 
-stow --target ~ hypr
+# Check and delete original folder
+if [ -d ~/.config/ghostty ]; then
+  echo "Remove existing ghostty directory..."
+fi
 
+#Stow ghostty
+echo "Stow ghostty..."
+stow --target=~ ghostty
 
+# Check and delete original folder
+if [ -d ~/.config/hypr ]; then
+  echo "Remove existing hypr directory..."
+fi
+
+#Stow hypr
+echo "Stow hypr..."
+stow --target=~ hypr
+
+# Check and delete original folder
+if [ -d ~/.config/waybar ]; then
+  echo "Remove existing waybar directory..."
+fi
+
+#Stow waybar
+echo "Stow waybar..."
+stow --target=~ waybar
+
+# Check and delete original file
+if [ -f ~/.config/starship.toml ]; then
+  echo "Remove existing starship.toml file..."
+fi
+
+#Stow starship.toml
+echo "Stow starship.toml..."
+stow --target=~ starship.toml
+
+# Check and delete original file
+if [ -f ~/.config/starship.toml ]; then
+  echo "Remove existing starship.toml file..."
+fi
+
+#Stow starship.toml
+echo "Stow starship.toml..."
+stow --target=~ starship
+
+# Check and delete original file
+if [ -f ~/.bash_profile ]; then
+  echo "Remove existing .bash_profile file..."
+fi
+
+#Stow .bash_profile
+echo "Stow .bash_profile..."
+stow --target=~ profile
+
+# Check and delete original file
+if [ -f ~/.bashrc ]; then
+  echo "Remove existing .bashrc file..."
+fi
+
+#Stow .bashrc
+echo "Stow .bashrc..."
+stow --target=~ bashrc
