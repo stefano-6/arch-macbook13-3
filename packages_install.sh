@@ -42,6 +42,9 @@ fi
 echo "Intalling terminals..."
 install_pkg "${TEREMINALS[@]}"
 
+echo "Intalling login manager..."
+install_pkg "${LOGIN[@]}"
+
 echo "Intalling hyprland..."
 install_pkg "${HYPRLAND[@]}"
 
